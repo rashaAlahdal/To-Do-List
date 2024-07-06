@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/986d95f681.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="task-list">
+        <h1>To-Do List</h1>
+        <input type="text" id="new-task" placeholder="Task to be done...">
+        <button onclick="addTask()" class="add-task">Add</button>
+        <button onclick="selectAll()"class="select-all">Select All</button>
+        <button onclick="deleteAll()"class="delete-all">Delete All</button>
+        <ul id="tasks">
+        </ul>
+    </div>
+    <script src="todoscript.js"></script>
+</body>
+<style>
+    
+body {
+    font-family: Arial, sans-serif;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  color: #FFF5E1;
+  
+}
+
+.task-list {
+  background-color: #0C1844;
+  padding: 200px;
+  margin: 60px auto;
+  border-radius: 10px;
+  align-items: center;
+  height: 200px;
+  width: 380px;
+  display: block;
+  text-align: center;
+}
+
+h1{ text-align: left;
+  height: 70px;
+  
+  position: center;
+  font-size: 60px;
+  width: 1000px;
+	text-align: left;
+	overflow: auto;
+	position: relative;
+	margin: 0px 1000px 0px 10px
+	
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+    border: 1px solid #0C1844;
+    align-items: center;
+    
+}
+input[id="new-task"] {
+    color: #0C1844;
+    background: #FFF5E1;
+    align-items: left;
+    border-radius: 30px;
+    margin: 10px auto;
+    text-align: left;
+    display: inline-block;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #0C1844;
+    text-align: center;
+}
+
+.task-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+.add-task {
+  background-color: #C80036;
+  color: #FFF5E1;
+  border: none;
+  padding: 12px;
+  border-radius: 30px;
+  cursor: pointer;
+  
+}
+.select-all,
+.delete-all {
+  background-color: #FFF5E1;
+  color: #C80036;
+  border: none;
+  padding: 3px 13px;
+  cursor: pointer;
+  border-radius: 15px;
+  margin: 0px 13px 0px 10px;
+  display: inline-block;
+  position: relative;
+  left: 10%;
+  transform: translateX(-50%);
+}
+
+.task-item span {
+    flex-grow: 1;
+}
+
+.task-item button {
+    margin-left: 10px;
+}
+.completed {
+  text-decoration: line-through;
+  color: #FF6969;
+}
+</style>
+</html>
